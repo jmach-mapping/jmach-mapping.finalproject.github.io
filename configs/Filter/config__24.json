@@ -1,0 +1,57 @@
+{
+  "taskOper": "OR",
+  "groupByLayer": false,
+  "zoomto": false,
+  "zoombackto": true,
+  "allowCustom": false,
+  "allowResetAll": false,
+  "allowTurnOffAll": false,
+  "filters": [
+    {
+      "layerId": "Hamilton_Ontario_Area_Potential_Flips_7024",
+      "url": "https://services6.arcgis.com/VAyjEFwzj06Hrndi/arcgis/rest/services/Hamilton_Ontario_Area_Potential_Flips/FeatureServer/0",
+      "name": "Active Candidate Properties Only",
+      "filter": {
+        "logicalOperator": "AND",
+        "parts": [
+          {
+            "fieldObj": {
+              "name": "Active",
+              "label": "Active",
+              "dateFormat": "",
+              "shortType": "string",
+              "type": "esriFieldTypeString"
+            },
+            "operator": "stringOperatorIs",
+            "valueObj": {
+              "isValid": true,
+              "type": "value",
+              "value": "Y"
+            },
+            "interactiveObj": "",
+            "caseSensitive": false,
+            "displaySQL": "Active = 'Y'",
+            "expr": "Active = 'Y'"
+          }
+        ],
+        "expr": "Active = 'Y'",
+        "displaySQL": "Active = 'Y'"
+      },
+      "icon": null,
+      "enableMapFilter": false,
+      "autoApplyWhenWidgetOpen": true,
+      "collapse": false,
+      "symbol": {
+        "angle": 0,
+        "xoffset": 12,
+        "yoffset": 12,
+        "type": "esriPMS",
+        "url": "http://static.arcgis.com/images/Symbols/Basic/CheckeredFlag.png",
+        "imageData": "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",
+        "contentType": "image/png",
+        "width": 9,
+        "height": 9
+      }
+    }
+  ]
+}
